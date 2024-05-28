@@ -1,0 +1,15 @@
+{
+  "name": "undesicimo-zenn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "new:article": "zenn new:article",
+    "preview": "zenn preview"
+  },
+  "author": "undesicimo",
+  "license": "ISC",
+  "dependencies": {
+    "zenn-cli": "^0.1.153"
+  }
+}
