@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-以下は、Next.js を使った例となります。
+以下は、Next.js 14x, Tanstack Query 5x を使った例となります。
 
 ## セットアップ
 
@@ -158,7 +158,7 @@ export default async function CMSLayout({
 
 ### TOBE
 
-一方、ネットワークレスポンスを見ると、改めて取得したデータがコンポーネントファイルの bundle と一緒に返ってきていることがわかります。
+一方、ネットワークレスポンスを見ると、予め取得したデータがコンポーネントファイルの bundle と一緒に返ってきていることがわかります。
 ![alt text](/images/image-1.png)
 useSite のフックが行うクライアントサイド fetch もしません。
 ![alt text](/images/image4.png)
