@@ -108,6 +108,8 @@ export default function useSite() {
 ```
 
 サーバーサイドで react-query を働かさせます。
+useSite フックが使われているクライアントコンポーネントを囲むサーバーコンポーネントにて、
+`HydrationBoundary` を設定。
 
 ```ts: (cms)/layout.tsx
 import AppBar from "@/src/components/component/page-app-bar";
@@ -132,6 +134,7 @@ export default async function CMSLayout({
     queryFn: getSiteInfo, //💡 同様のquery関数も指定
   });
 
+  //💡 HydrationBoundary以降すべてのuseSiteフックが行うfetchは、サーバーサイドで行われます
   return (
     <>
       <HydrationBoundary state={dehydrate(queryClient)}>
